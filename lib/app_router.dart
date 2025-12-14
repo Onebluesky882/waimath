@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:waimath/auth/domain/presentation/login_page.dart';
 import 'package:waimath/homepage.dart';
-import 'package:waimath/auth/presentation/login_page.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -12,7 +12,10 @@ class AppRouter {
         },
         routes: [
           GoRoute(path: "/", builder: (context, state) => const Homepage()),
-          GoRoute(path: "/login", builder: (context, state) => const Login()),
+          GoRoute(
+            path: "/login",
+            builder: (context, state) => const LoginPage(),
+          ),
         ],
       ),
     ],
