@@ -1,15 +1,16 @@
-import 'package:waimath/auth/data/data_source/remote_data_source.dart';
-import 'package:waimath/auth/domain/Repository/auth_repository.dart';
+import 'package:waimath/auth/data/data_source/supabase_remote_data_source.dart';
 import 'package:waimath/auth/domain/entities/user.dart';
+import 'package:waimath/auth/domain/repository/auth_repository.dart'
+    show AuthRepository;
 
 class AuthRepositoryImpl implements AuthRepository {
-  final RemoteDataSource remoteDataSource;
-  AuthRepositoryImpl({required this.remoteDataSource});
+  final SupabaseRemoteDataSource supabaseRemoteDataSource;
+
+  AuthRepositoryImpl({required this.supabaseRemoteDataSource});
 
   @override
   Future<User> login(String email, String password) async {
-    final userModel = await remoteDataSource.login(email, password);
-
+    final userModel = await supabaseRemoteDataSource.login(email, password);
     return userModel.toEntity();
   }
 }
