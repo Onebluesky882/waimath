@@ -1,4 +1,4 @@
-import 'package:waimath/auth/domain/entities/user.dart';
+import 'package:waimath/feature/auth/domain/entities/User.dart';
 
 abstract class Repository {
   Future<User> login(String email, password);
