@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.waimath"
+    namespace = "com.supabase.waimath"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
