@@ -27,20 +27,22 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     print(emailController);
-    return PaddingX(
-      number: 14,
+    return PaddingXy(
       child: Column(
         children: [
-          Container(
+          PaddingXy(
+            x: 10,
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Email',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(18),
+                ),
               ),
               controller: emailController,
             ),
           ),
-
+          SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {
               void login() {

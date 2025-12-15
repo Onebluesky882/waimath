@@ -1,31 +1,23 @@
 import 'package:flutter/material.dart';
 
-class PaddingX extends StatelessWidget {
-  final double number;
+class PaddingXy extends StatelessWidget {
+  final double x;
+  final double y;
+  final Padding? padding;
   final Widget child;
 
-  const PaddingX({super.key, required this.number, required this.child});
+  const PaddingXy({
+    super.key,
+    this.x = 0,
+    this.y = 0,
+    this.padding,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsGeometry.only(left: number, right: number),
-      child: child,
-    );
-  }
-}
-
-
-class PaddingY extends StatelessWidget {
-  final double number;
-  final Widget child;
-
-  const PaddingY({super.key, required this.child, required this.number});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsetsGeometry.only(top: number, bottom: number),
+      padding: EdgeInsetsGeometry.only(left: x, right: x, top: y, bottom: y),
       child: child,
     );
   }
