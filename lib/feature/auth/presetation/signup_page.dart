@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:waimath/common/padding_xy.dart';
 import 'package:waimath/widget/auth_screen/login_form.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignupPage extends StatefulWidget {
+  const SignupPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignupPage> createState() => _SignupPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignupPageState extends State<SignupPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
@@ -62,4 +62,4 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-}
+} 
